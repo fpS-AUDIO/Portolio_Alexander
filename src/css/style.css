@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  position: relative; }
+
+body {
+  min-height: 100vh;
+  background-color: var(--color-deep-dark); }
+
+@keyframes k-glow {
+  0% {
+    box-shadow: none; }
+  100% {
+    box-shadow: var(--glow-primary-out-big); } }
+
+body {
+  color: var(--color-text-primary);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6; }
+
+h1 {
+  font-size: 3rem; }
+
+.hidden {
+  /* allows no transitions */
+  display: none;
+  /* completly removing */
+  /* Hide Element with transitions */
+  opacity: 0;
+  /* hide visually */
+  -webkit-pointer-events: none;
+  /* make it unaccessible to mouse and keyboard */
+  -moz-pointer-events: none;
+  /* make it unaccessible to mouse and keyboard */
+  pointer-events: none;
+  /* make it unaccessible to mouse and keyboard */
+  visibility: hidden;
+  /* hide from screen readers */ }
+
+.noSelect {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .noSelect:focus {
+    outline: none !important; }
+
+/* ----- MARGIN CLASSES ----- */
+.margin-botton-bigest {
+  margin-bottom: var(--margin-bottom-bigest); }
+
+.margin-botton-big {
+  margin-bottom: var(--margin-bottom-big); }
+
+.margin-botton-normal {
+  margin-bottom: var(--margin-bottom-normal); }
+
+.margin-botton-smaller {
+  margin-bottom: var(--margin-bottom-smaller); }
+
+.margin-botton-smallest {
+  margin-bottom: var(--margin-bottom-smallest); }
+
+.container--centered {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+:root {
+  --color-deep-dark: #0a0a0a;
+  --color-primary-lightest: #e6f9ff;
+  --color-primary-lighter: #66d9ff;
+  --color-primary: #00bfff;
+  --color-primary-darker: #007399;
+  --color-primary-darkest: #001319;
+  --color-secondary-lightest: #f2e6ff;
+  --color-secondary-lighter: #b366ff;
+  --color-secondary: #8000ff;
+  --color-secondary-darker: #400080;
+  --color-secondary-darkest: #0d0019;
+  --color-accent-lightest: #ffe6f2;
+  --color-accent-lighter: #ff66b2;
+  --color-accent: #ff007f;
+  --color-accent-darker: #99004c;
+  --color-accent-darkest: #19000d;
+  --color-text-primary: #c0c0c0;
+  --glow-primary-out: 0 0 0.875rem 0.1rem rgba(0, 191, 255, 0.25);
+  --glow-primary-in: inset 0 0 0.875rem 0.1rem rgba(0, 191, 255, 0.25);
+  --glow-primary-out-big: 0 0 3rem 0.5rem rgba(0, 191, 255, 0.25);
+  --margin-bottom-bigest: 20vh;
+  --margin-bottom-big: 6.4rem;
+  --margin-bottom-normal: 4.8rem;
+  --margin-bottom-smaller: 2.4rem;
+  --margin-bottom-smallest: 1.6rem; }
+
+.navigation__checkbox {
+  display: none; }
+
+.navigation__label {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 2000;
+  cursor: pointer;
+  background-color: var(--color-primary-darkest);
+  border: 0.3rem solid var(--color-primary);
+  box-shadow: var(--glow-primary-out), var(--glow-primary-in);
+  text-align: center; }
+
+.navigation__background {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 2.5rem;
+  right: 2.5rem;
+  background-color: rgba(13, 0, 25, 0.9);
+  z-index: 1900;
+  transition: all 400ms cubic-bezier(0.85, 0, 0.25, 1); }
+  @supports (-webkit-backdrop-filter: blur(2px)) or (backdrop-filter: blur(2px)) {
+    .navigation__background {
+      -webkit-backdrop-filter: blur(2px) !important;
+      backdrop-filter: blur(2px) !important;
+      background-color: rgba(13, 0, 25, 0.2); } }
+
+.navigation__nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  backface-visibility: hidden;
+  z-index: 1950;
+  opacity: 0;
+  width: 0;
+  -webkit-pointer-event: none;
+  /* make it unaccessible to mouse and keyboard */
+  visibility: hidden;
+  /* hide from screen readers */
+  transition: all 400ms ease;
+  perspective: 100rem; }
+
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translate(0, -50%) rotateY(-35deg);
+  list-style: none;
+  text-align: end; }
+
+.navigation__item {
+  margin: 2.4rem; }
+
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1.2rem 2.4rem;
+  border-bottom: 0.2rem solid var(--color-primary);
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, var(--color-primary) 50%);
+  background-size: 250%;
+  transition: all 400ms ease; }
+
+.navigation__link:hover, .navigation__link:active {
+  background-position: 100%;
+  color: var(--color-deep-dark);
+  transform: translateX(-1rem) rotateY(20deg);
+  animation: k-glow 200ms ease 250ms 1 forwards; }
+
+.navigation__icon {
+  position: relative;
+  margin-top: 3rem; }
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    width: 3rem;
+    height: 0.4rem;
+    background-color: var(--color-primary);
+    display: inline-block;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    box-shadow: var(--glow-primary-out); }
+  .navigation__icon::before, .navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0; }
+  .navigation__icon::before {
+    top: -0.8rem; }
+  .navigation__icon::after {
+    top: 0.8rem; }
+
+.navigation__label:hover .navigation__icon::before {
+  top: -1rem; }
+
+.navigation__label:hover .navigation__icon::after {
+  top: 1rem; }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(60); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100vw;
+  -webkit-pointer-events: auto;
+  pointer-events: auto;
+  visibility: visible; }
+
+.navigation__checkbox:checked ~ .navigation__label .navigation__icon {
+  background-color: transparent;
+  box-shadow: none; }
+
+.navigation__checkbox:checked ~ .navigation__label .navigation__icon::before {
+  transform: rotate(45deg);
+  top: 0;
+  transform-origin: center; }
+
+.navigation__checkbox:checked ~ .navigation__label .navigation__icon::after {
+  transform: rotate(-45deg);
+  top: 0;
+  transform-origin: center; }

@@ -1,0 +1,43 @@
+{
+  "name": "portfolio_alexander_ivanov",
+  "version": "1.0.0",
+  "description": "Welcome to my portfolio website, where code and design blend like a fine culinary dish. With a background as an ex-kitchen chef, I've mastered the art of balancing flavor profiles on a plate—and now I apply that same artistry to the digital world. My website features a dark, modern design, with sleek lines and bold choices that captivate the eye, just as a well-crafted dish delights the palate. Built with optimized architecture and clean code, this site is a testament to my passion for creating seamless digital experiences. So take a look around, savor the visual aesthetics, and see how my skills in web development and design can create something truly delectable.",
+  "source": "index.html",
+  "default": "index.html",
+  "scripts": {
+    "watch:sass": "node-sass src/sass/main.scss src/css/style.css -w",
+    "justserver": "live server",
+    "devserver": "parcel index.html",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass src/sass/main.scss src/css/style.comp.css",
+    "concat:css": "concat -o src/css/style.concat.css src/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer 'last 10 versions' src/css/style.concat.css -o src/css/style.prefix.css",
+    "compress:css": "node-sass src/css/style.prefix.css src/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git + https://github.com/fpS-AUDIO/Portolio_Alexander.git"
+  },
+  "author": "Alexander Ivanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fpS-AUDIO/Portolio_Alexander/issues"
+  },
+  "homepage": "#",
+  "devDependencies": {
+    "@parcel/packager-raw-url": "^2.12.0",
+    "@parcel/transformer-webmanifest": "^2.12.0",
+    "autoprefixer": "^10.4.19",
+    "concat": "^1.0.3",
+    "node-sass": "^9.0.0",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.12.0",
+    "postcss-cli": "^11.0.0"
+  },
+  "dependencies": {
+    "core-js": "^3.37.0",
+    "regenerator-runtime": "^0.14.1"
+  }
+}

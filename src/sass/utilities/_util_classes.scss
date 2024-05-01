@@ -1,0 +1,26 @@
+.hidden {
+  /* allows no transitions */
+  display: none; /* completly removing */
+
+  /* Hide Element with transitions */
+  opacity: 0; /* hide visually */
+
+  -webkit-pointer-events: none; /* make it unaccessible to mouse and keyboard */
+  -moz-pointer-events: none; /* make it unaccessible to mouse and keyboard */
+  pointer-events: none; /* make it unaccessible to mouse and keyboard */
+  visibility: hidden; /* hide from screen readers */
+}
+
+.noSelect {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  &:focus {
+    outline: none !important;
+  }
+}

@@ -1,0 +1,21 @@
+// main.scss
+// Entry point file that imports all other files.
+
+// ----- base
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+
+// ----- utilities
+@import "utilities/util_classes";
+@import "utilities/margins";
+@import "utilities/functions";
+@import "utilities/mixins";
+@import "utilities/variables";
+
+// ----- Components
+@import "components/buttons";
+
+// ----- layouts
+@import "layout/navbar";
+@import "layout/header";

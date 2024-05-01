@@ -1,0 +1,5 @@
+"start": "npm-run-all --parallel devserver watch:sass",
+"start": "parcel index.html",
+
+
+// https://github.com/codrops/CSSGlitchEffect/

@@ -1,0 +1,8 @@
+@keyframes k-glow {
+  0% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: var(--glow-primary-out-big);
+  }
+}

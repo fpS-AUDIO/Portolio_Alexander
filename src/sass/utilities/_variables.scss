@@ -1,0 +1,48 @@
+// SCSS variables
+$color-primary: #00bfff;
+$color-primary-darkest: #001319;
+$color-secondary-darkest: #0d0019;
+
+// mostly using css custom properties to make the variables
+// accessible to js and make them inherited
+
+:root {
+  // base colors
+  --color-deep-dark: #0a0a0a;
+
+  // Primary 1
+  --color-primary-lightest: #e6f9ff;
+  --color-primary-lighter: #66d9ff;
+  --color-primary: #00bfff; // electric-blue
+  --color-primary-darker: #007399;
+  --color-primary-darkest: #001319;
+
+  // Secondary 2
+  --color-secondary-lightest: #f2e6ff;
+  --color-secondary-lighter: #b366ff;
+  --color-secondary: #8000ff; // tech-purple
+  --color-secondary-darker: #400080;
+  --color-secondary-darkest: #0d0019;
+
+  // Accent Colors
+  --color-accent-lightest: #ffe6f2;
+  --color-accent-lighter: #ff66b2;
+  --color-accent: #ff007f; // neon-pink
+  --color-accent-darker: #99004c;
+  --color-accent-darkest: #19000d;
+
+  // Text colors
+  --color-text-primary: #c0c0c0; // metalic-silver
+
+  // Shadows / Glows
+  --glow-primary-out: 0 0 0.875rem 0.1rem rgba(0, 191, 255, 0.25);
+  --glow-primary-in: inset 0 0 0.875rem 0.1rem rgba(0, 191, 255, 0.25);
+  --glow-primary-out-big: 0 0 3rem 0.5rem rgba(0, 191, 255, 0.25);
+
+  // Margins
+  --margin-bottom-bigest: 20vh;
+  --margin-bottom-big: 6.4rem;
+  --margin-bottom-normal: 4.8rem;
+  --margin-bottom-smaller: 2.4rem;
+  --margin-bottom-smallest: 1.6rem;
+}
