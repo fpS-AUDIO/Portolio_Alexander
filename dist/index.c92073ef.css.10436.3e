@@ -11,13 +11,11 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
   position: relative;
-  overflow-x: hidden;
 }
 
 body {
   background-color: var(--color-deep-dark);
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 @keyframes k-glow {
@@ -269,18 +267,13 @@ h1 {
 
 .header {
   z-index: 2;
-  justify-content: center;
-  align-items: center;
   width: 100vw;
   height: 100vh;
-  display: flex;
   position: relative;
 }
 
-.header-background {
+.header__background {
   z-index: 1;
-  opacity: .4;
-  box-shadow: var(--glow-primary-out-big);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -289,30 +282,10 @@ h1 {
   overflow: hidden;
 }
 
-.header-background__content {
+.header__background__content {
   object-fit: cover;
   width: 100%;
   height: 100%;
   display: block;
-}
-
-.header-background :after {
-  content: "";
-  backdrop-filter: blur(5px);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.blured-container {
-  border: .5rem solid var(--color-secondary-darker);
-  z-index: 3;
-  border-radius: 16px;
-  width: 80vw;
-  height: 60vh;
-  display: none;
-  box-shadow: 0 4px 30px #00131980;
 }
 /*# sourceMappingURL=index.c92073ef.css.map */
