@@ -35,8 +35,10 @@ $color-secondary-darkest: #0d0019;
   --color-text-primary: #c0c0c0; // metalic-silver
 
   // Shadows / Glows
-  --glow-primary-out: 0 0 0.875rem 0.1rem rgba(0, 191, 255, 0.25);
-  --glow-primary-in: inset 0 0 0.875rem 0.1rem rgba(0, 191, 255, 0.25);
+  // --glow-primary-out: 0 0 0.875rem 0.1rem rgba(0, 191, 255, 0.25);
+  // --glow-primary-in: inset 0 0 0.875rem 0.1rem rgba(0, 191, 255, 0.25);
+  --glow-primary-out: 0 0 1rem 0.1rem rgba(0, 191, 255, 0.25);
+  --glow-primary-in: inset 0 0 1rem 0.1rem rgba(0, 191, 255, 0.25);
   --glow-primary-out-big: 0 0 3rem 0.5rem rgba(0, 191, 255, 0.25);
 
   // Margins

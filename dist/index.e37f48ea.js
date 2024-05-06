@@ -584,14 +584,26 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"aenu9":[function(require,module,exports) {
+// ----- IMPORTS ----- //
 // import these for polyfilling
-var _webImmediateJs = require("core-js/modules/web.immediate.js"); // activate hot module replacement
- // if (module.hot) {
- //     module.hot.accept();
- //   }
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var _webImmediateJs = require("core-js/modules/web.immediate.js");
 var _runtime = require("regenerator-runtime/runtime");
+// import modules
+var _viewHeaderJs = require("./views/view-header.js");
+var _viewHeaderJsDefault = parcelHelpers.interopDefault(_viewHeaderJs);
+// ----- activate hot module replacement
+// if (module.hot) {
+//     module.hot.accept();
+//   }
+// ----- CONTROLLER FUNCTIONS ----- //
+// ----- ENTRY POINT FUNCTION ----- //
+const init = function() {
+    (0, _viewHeaderJsDefault.default).addHandlerSlowBgVideo();
+};
+init();
 
-},{"core-js/modules/web.immediate.js":"49tUX","regenerator-runtime/runtime":"dXNgZ"}],"49tUX":[function(require,module,exports) {
+},{"core-js/modules/web.immediate.js":"49tUX","regenerator-runtime/runtime":"dXNgZ","./views/view-header.js":"c4omr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"49tUX":[function(require,module,exports) {
 "use strict";
 // TODO: Remove this module from `core-js@4` since it's split to modules listed below
 require("52e9b3eefbbce1ed");
@@ -2408,6 +2420,48 @@ try {
     if (typeof globalThis === "object") globalThis.regeneratorRuntime = runtime;
     else Function("r", "regeneratorRuntime = r")(runtime);
 }
+
+},{}],"c4omr":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class ViewHeader {
+    #parentElement = document.querySelector(".header");
+    #bgVideoEl = document.querySelector(".header-bg-video");
+    addHandlerSlowBgVideo() {
+        this.#bgVideoEl.playbackRate = 0.5; // Slows down the playback speed to half the normal rate
+    }
+}
+exports.default = new ViewHeader();
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
 
 },{}]},["hycaY","aenu9"], "aenu9", "parcelRequire8b7f")
 

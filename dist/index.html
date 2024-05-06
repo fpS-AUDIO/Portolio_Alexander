@@ -62,14 +62,16 @@
     </div>
     <header class="header">
       <div class="header-background">
-        <picture class="header-background__content">
-          <source class="header__background__content" media="(max-width: 1366px)" type="img/webp" srcset="/bg-rain--small.1b0f5bfd.webp">
-          <source class="header__background__content" media="(min-width: 1367px)" type="img/webp" srcset="/bg-rain--large.58497dd0.webp">
-          <img class="header__background__content" src="/bg-rain--large.58497dd0.webp" alt="background decorative polygons">
-        </picture>
+        <video class="header-background__content header-bg-video" autoplay="" mute="" loop="">
+          <!-- options for video -->
+          <source src="/bg_rain.b7d32d8b.webm" type="video/webm">
+          <source src="/bg_rain.36a33594.mp4" type="video/mp4">
+          <!-- callback text in case of not compatibility -->
+          Your browser doesn't support video
+        </video>
       </div>
 
-      <div class="blured-container"></div>
+      <!-- <div class="blured-container"></div> -->
     </header>
 
     <h1>Hello, I'm Alexander</h1>
