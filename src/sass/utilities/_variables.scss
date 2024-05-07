@@ -16,12 +16,14 @@ $color-secondary-darkest: #0d0019;
   --color-primary: #00bfff; // electric-blue
   --color-primary-darker: #007399;
   --color-primary-darkest: #001319;
+  --color-primary-darkest-transparent: rgba(0, 19, 25, 0.4);
 
   // Secondary 2
   --color-secondary-lightest: #f2e6ff;
   --color-secondary-lighter: #b366ff;
   --color-secondary: #8000ff; // tech-purple
   --color-secondary-darker: #400080;
+  --color-secondary-darker-transparent: rgba(64, 0, 128, 0.2);
   --color-secondary-darkest: #0d0019;
 
   // Accent Colors
@@ -32,14 +34,19 @@ $color-secondary-darkest: #0d0019;
   --color-accent-darkest: #19000d;
 
   // Text colors
+  --color-text-primary-lightest: #f2f2f2;
+  --color-text-primary-lighter: #d9d9d9;
   --color-text-primary: #c0c0c0; // metalic-silver
+  --color-text-primary-darker: #737373;
+  --color-text-primary-darkest: #262626;
+  --color-text-primary-darkest-transparent: rgba(38, 38, 38, 0.4);
 
   // Shadows / Glows
-  // --glow-primary-out: 0 0 0.875rem 0.1rem rgba(0, 191, 255, 0.25);
-  // --glow-primary-in: inset 0 0 0.875rem 0.1rem rgba(0, 191, 255, 0.25);
   --glow-primary-out: 0 0 1rem 0.1rem rgba(0, 191, 255, 0.25);
   --glow-primary-in: inset 0 0 1rem 0.1rem rgba(0, 191, 255, 0.25);
   --glow-primary-out-big: 0 0 3rem 0.5rem rgba(0, 191, 255, 0.25);
+  --glow-secondary-out: 0 0 1rem 0.1rem rgba(128, 0, 255, 0.25);
+  --glow-secondary-in: inset 0 0 1rem 0.1rem rgba(128, 0, 255, 0.25);
 
   // Margins
   --margin-bottom-bigest: 20vh;
@@ -47,4 +54,14 @@ $color-secondary-darkest: #0d0019;
   --margin-bottom-normal: 4.8rem;
   --margin-bottom-smaller: 2.4rem;
   --margin-bottom-smallest: 1.6rem;
+
+  // Paddings
+  // (px): 2, 4, 8, 12, 16, 24, 32, 48, 64, 80, 96, 128, 160, 192, 224
+  --padding-bigger: 4.8rem;
+  --padding-default: 3.2rem;
+  --padding-smaller: 2.4rem;
+  --padding-smallest: 1.2rem;
+
+  // other sizes
+  --border-radius: 8px;
 }

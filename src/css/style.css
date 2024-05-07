@@ -87,25 +87,39 @@ h1 {
   --color-primary: #00bfff;
   --color-primary-darker: #007399;
   --color-primary-darkest: #001319;
+  --color-primary-darkest-transparent: rgba(0, 19, 25, 0.4);
   --color-secondary-lightest: #f2e6ff;
   --color-secondary-lighter: #b366ff;
   --color-secondary: #8000ff;
   --color-secondary-darker: #400080;
+  --color-secondary-darker-transparent: rgba(64, 0, 128, 0.2);
   --color-secondary-darkest: #0d0019;
   --color-accent-lightest: #ffe6f2;
   --color-accent-lighter: #ff66b2;
   --color-accent: #ff007f;
   --color-accent-darker: #99004c;
   --color-accent-darkest: #19000d;
+  --color-text-primary-lightest: #f2f2f2;
+  --color-text-primary-lighter: #d9d9d9;
   --color-text-primary: #c0c0c0;
+  --color-text-primary-darker: #737373;
+  --color-text-primary-darkest: #262626;
+  --color-text-primary-darkest-transparent: rgba(38, 38, 38, 0.4);
   --glow-primary-out: 0 0 1rem 0.1rem rgba(0, 191, 255, 0.25);
   --glow-primary-in: inset 0 0 1rem 0.1rem rgba(0, 191, 255, 0.25);
   --glow-primary-out-big: 0 0 3rem 0.5rem rgba(0, 191, 255, 0.25);
+  --glow-secondary-out: 0 0 1rem 0.1rem rgba(128, 0, 255, 0.25);
+  --glow-secondary-in: inset 0 0 1rem 0.1rem rgba(128, 0, 255, 0.25);
   --margin-bottom-bigest: 20vh;
   --margin-bottom-big: 6.4rem;
   --margin-bottom-normal: 4.8rem;
   --margin-bottom-smaller: 2.4rem;
-  --margin-bottom-smallest: 1.6rem; }
+  --margin-bottom-smallest: 1.6rem;
+  --padding-bigger: 4.8rem;
+  --padding-default: 3.2rem;
+  --padding-smaller: 2.4rem;
+  --padding-smallest: 1.2rem;
+  --border-radius: 8px; }
 
 .navigation__checkbox {
   display: none; }
@@ -243,15 +257,14 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center; }
-  .header *::after {
+  .header::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 25;
-    backdrop-filter: blur(3px); }
+    z-index: 3; }
 
 .header-background {
   position: absolute;
@@ -268,3 +281,14 @@ h1 {
     width: 100%;
     height: 100%;
     object-fit: cover; }
+
+.blured-container {
+  width: 80vw;
+  height: 60vh;
+  position: relative;
+  z-index: 5;
+  padding: var(--padding-default);
+  border: 0.3rem solid var(--color-text-primary-darkest-transparent);
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 4rem 0.1rem var(--color-primary-darkest-transparent);
+  backdrop-filter: blur(8px); }

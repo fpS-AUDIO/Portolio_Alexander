@@ -30,27 +30,58 @@ gradients
 ```scss
 // using css custom properties to make the accessible to js and make inherited
 :root {
-  // ----- colors
+  // base colors
+  --color-deep-dark: #0a0a0a;
 
   // Primary 1
-  --color-primary-blue-lightest: #cdd2e3;
-  --color-primary-blue-lighter: #8290b9;
-  --color-primary-blue: #042073;
-  --color-primary-blue-darker: #02103a;
-  --color-primary-blue-darkest: #010617;
+  --color-primary-lightest: #e6f9ff;
+  --color-primary-lighter: #66d9ff;
+  --color-primary: #00bfff; // electric-blue
+  --color-primary-darker: #007399;
+  --color-primary-darkest: #001319;
+  --color-primary-darkest-transparent: rgba(0, 19, 25, 0.4);
 
-  // Primary 2
-  --color-primary-purple-lightest: #f7d0eb;
-  --color-primary-purple-lighter: #e873c4;
-  --color-primary-purple: #d8169d;
-  --color-primary-purple-darker: #820d5e;
-  --color-primary-purple-darkest: #2b041f;
+  // Secondary 2
+  --color-secondary-lightest: #f2e6ff;
+  --color-secondary-lighter: #b366ff;
+  --color-secondary: #8000ff; // tech-purple
+  --color-secondary-darker: #400080;
+  --color-secondary-darker-transparent: rgba(64, 0, 128, 0.2);
+  --color-secondary-darkest: #0d0019;
 
   // Accent Colors
-  --accent-color: #ff003a;
+  --color-accent-lightest: #ffe6f2;
+  --color-accent-lighter: #ff66b2;
+  --color-accent: #ff007f; // neon-pink
+  --color-accent-darker: #99004c;
+  --color-accent-darkest: #19000d;
 
   // Text colors
-  --color-text-primary: #fff;
+  --color-text-primary-lightest: #f2f2f2;
+  --color-text-primary-lighter: #d9d9d9;
+  --color-text-primary: #c0c0c0; // metalic-silver
+  --color-text-primary-darker: #737373;
+  --color-text-primary-darkest: #262626;
+  --color-text-primary-darkest-transparent: rgba(38, 38, 38, 0.4);
+
+  // Shadows / Glows
+  --glow-primary-out: 0 0 1rem 0.1rem rgba(0, 191, 255, 0.25);
+  --glow-primary-in: inset 0 0 1rem 0.1rem rgba(0, 191, 255, 0.25);
+  --glow-primary-out-big: 0 0 3rem 0.5rem rgba(0, 191, 255, 0.25);
+  --glow-secondary-out: 0 0 1rem 0.1rem rgba(128, 0, 255, 0.25);
+  --glow-secondary-in: inset 0 0 1rem 0.1rem rgba(128, 0, 255, 0.25);
+
+  // Margins
+  --margin-bottom-bigest: 20vh;
+  --margin-bottom-big: 6.4rem;
+  --margin-bottom-normal: 4.8rem;
+  --margin-bottom-smaller: 2.4rem;
+  --margin-bottom-smallest: 1.6rem;
+
+  // Paddings
+
+  // other sizes
+  --border-radius: 8px;
 }
 ```
 
